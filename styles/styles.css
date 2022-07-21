@@ -40,6 +40,17 @@
   a {
     text-decoration: none;
   }
+
+  .size{
+    font-size: 40px;
+  }
+
+  @media (max-width: 42rem) {
+    .size{
+      font-size: 2rem;
+    }
+  }
+
   .main-nav {
     margin: auto;
     display: flex;
@@ -61,8 +72,9 @@
     background: var(--dark);
   }
 
+
   .container{
-    width: 120rem; 
+    width: 100rem; 
   }
 
   .center{
@@ -70,14 +82,29 @@
     align-items: center;
   }
 
-  .size{
-    font-size: 40px;
+
+
+
+  @media (max-width: 83rem) {
+    .container{
+      width: 90%;
+    }
   }
 
-
+  @media(max-width: 42rem){
+    .main-nav{
+      display: block;
+      overflow-x: scroll;
+    }
+    .main-nav a{
+      display:block;
+      text-align: center;
+    }
+  }
 
   /*Seccion del Hero */
 
+  
   .hero{
     display: flex;
     background-image: url('../maxresdefault.jpeg');
@@ -127,6 +154,21 @@
     top: 2rem; 
   }
 
+  @media (max-width: 43rem) {
+    .hero-subtitle{
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      gap: 0; 
+    }
+
+    .btn{
+      text-align: center;
+      width: auto;
+    }
+  }
+
   .shadow{
     margin: 2rem auto; 
     background: var(--white); 
@@ -171,6 +213,16 @@
     align-items: center;
   }
 
+
+  @media (max-width: 42rem) {
+    .service-cards{
+      flex-direction: column;
+    }
+  }
+
+
+  /* formulario */ 
+
   .form-container{
     display: flex; 
     flex-direction: column;
@@ -194,7 +246,6 @@
     gap: 1rem;  
     color: white; 
     background: var(--dark);
-    width: 60rem; 
     border-radius: 1rem;
     border: none; 
     padding: 2rem 1rem;
@@ -231,6 +282,23 @@
   .btn-area{
     display: flex;
     justify-content: flex-end;
+  }
+
+  @media (max-width: 42rem) {
+    fieldset{
+      width: 90%;
+      margin:auto;
+    }
+    .form-section1{
+      flex-direction: column;
+    }
+    .half-width{
+      width: 100%;
+    }
+
+    legend{
+      width: auto;
+    }
   }
 
   /*absolute: se posiciona con referencia al elemento padre mas cercano que este posicionado, de lo contrario se posiciona */ 
